@@ -12,16 +12,24 @@ namespace ConsoleAppTest
         static void Main(string[] args)
         {
             int[][] jaggedArray = new int[4][];
-
             jaggedArray[0] = new int[] { 1, 3, 5, 7, 9 };
             jaggedArray[1] = new int[] { 1, 0, 1000 };
             jaggedArray[2] = new int[] { 11, 22 };
-            jaggedArray[3] = new int[] { 11, 2, 65 };
+            jaggedArray[3] = new int[] { 11, 2, 20000 };
            
 
             SortJuggedArray.PrintMatrix(jaggedArray);
 
             SortJuggedArray.SortBySumm(jaggedArray, true);
+
+            Console.WriteLine("===========================");
+            SortJuggedArray.PrintMatrix(jaggedArray);
+            SortJuggedArray.SortByMax(jaggedArray, true);
+
+            Console.WriteLine("===========================");
+            SortJuggedArray.PrintMatrix(jaggedArray);
+
+            SortJuggedArray.SortByMin(jaggedArray, true);
 
             Console.WriteLine("===========================");
             SortJuggedArray.PrintMatrix(jaggedArray);

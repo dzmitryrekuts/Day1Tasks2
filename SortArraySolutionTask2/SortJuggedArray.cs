@@ -13,8 +13,8 @@ namespace SortArraySolutionTask2
         {
             switch (option)
             {
-
                 case true:
+                
                     for (int i = 0; i < jaggedArray.Length - 1; i++)
                     {
                         for (int j = 0; j < jaggedArray.Length - 1 - i; j++)
@@ -34,9 +34,9 @@ namespace SortArraySolutionTask2
                     {
                         for (int j = 0; j < jaggedArray.Length - 1 - i; j++)
                         {
-                            if (Summ(jaggedArray[i]) > Summ(jaggedArray[i + 1]))
+                            if (Summ(jaggedArray[j]) > Summ(jaggedArray[j + 1]))
                             {
-                                Swap(ref jaggedArray[i], ref jaggedArray[i + 1]);
+                                Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
                             }
                         }
                     }
@@ -51,33 +51,32 @@ namespace SortArraySolutionTask2
             switch (option)
             {
                 case true:
-                    for (int i = 0; i < jaggedArray.Length; i++)
+                    for (int i = 0; i < jaggedArray.Length - 1; i++)
                     {
-
-                        for (int j = 0; j < jaggedArray[i].Length; j++)
-
+                        for (int j = 0; j < jaggedArray.Length - 1 - i; j++)
+                        {
                             if (FindMaxElem(jaggedArray[j]) < FindMaxElem(jaggedArray[j + 1]))
                             {
                                 Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
                             }
+                        }
                     }
                     break;
 
 
                 default:
 
-                    for (int i = 0; i < jaggedArray.Length; i++)
+                    for (int i = 0; i < jaggedArray.Length - 1; i++)
                     {
-
-                        for (int j = 0; j < jaggedArray[i].Length; j++)
-
+                        for (int j = 0; j < jaggedArray.Length - 1 - i; j++)
+                        {
                             if (FindMaxElem(jaggedArray[j]) > FindMaxElem(jaggedArray[j + 1]))
                             {
                                 Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
                             }
+                        }
                     }
                     break;
-
             }
         }
 
@@ -87,32 +86,30 @@ namespace SortArraySolutionTask2
             switch (option)
             {
                 case true:
-                    for (int i = 0; i < jaggedArray.Length; i++)
+                    for (int i = 0; i < jaggedArray.Length - 1; i++)
                     {
-
-                        for (int j = 0; j < jaggedArray[i].Length; j++)
-
-                            if (FindMinElem(jaggedArray[j]) < FindMinElem(jaggedArray[j + 1]))
-                            {
-                                Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
-                            }
-                    }
-
-                    break;
-
-                default:
-
-                    for (int i = 0; i < jaggedArray.Length; i++)
-                    {
-
-                        for (int j = 0; j < jaggedArray[i].Length; j++)
-
+                        for (int j = 0; j < jaggedArray.Length - 1 - i; j++)
+                        {
                             if (FindMinElem(jaggedArray[j]) > FindMinElem(jaggedArray[j + 1]))
                             {
                                 Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
                             }
+                        }
                     }
+                    break;
 
+                default:
+
+                    for (int i = 0; i < jaggedArray.Length - 1; i++)
+                    {
+                        for (int j = 0; j < jaggedArray.Length - 1 - i; j++)
+                        {
+                            if (FindMinElem(jaggedArray[j]) < FindMinElem(jaggedArray[j + 1]))
+                            {
+                                Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
+                            }
+                        }
+                    }
                     break;
             }
         }
@@ -122,9 +119,8 @@ namespace SortArraySolutionTask2
             int summ = 0;
             for (int i = 0; i < array.Length; i++)
             {
-                summ += i;
+                summ += array[i];
             }
-
             return summ;
         }
 
@@ -152,8 +148,8 @@ namespace SortArraySolutionTask2
                     min = array[i];
                 }
             }
-
             return min;
+
         }
 
         private static void Swap(ref int[] a, ref int[] b)
