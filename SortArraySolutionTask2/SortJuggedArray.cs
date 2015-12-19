@@ -4,139 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SortArraySolutionTask2
+namespace SortArrayLogik
 {
+    delegate int SortArrayDel(int[] left, int[] right);
+
     public class SortJuggedArray
     {
 
-        public static void SortBySumm(int[][] jaggedArray, bool option)
+
+        public static void SortArrayI(int[][] jaggedArray, ICustomCompare comparator)
         {
-            switch (option)
+            for (int i = 0; i < jaggedArray.Length - 1; i++)
             {
-                case true:
-                
-                    for (int i = 0; i < jaggedArray.Length - 1; i++)
-                    {
-                        for (int j = 0; j < jaggedArray.Length - 1 - i; j++)
-                        {
-                            if (Summ(jaggedArray[j]) < Summ(jaggedArray[j + 1]))
-                            {
-                                Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
-                            }
-                        }
-                    }
-                    break;
-
-
-                default:
-
-                    for (int i = 0; i < jaggedArray.Length - 1; i++)
-                    {
-                        for (int j = 0; j < jaggedArray.Length - 1 - i; j++)
-                        {
-                            if (Summ(jaggedArray[j]) > Summ(jaggedArray[j + 1]))
-                            {
-                                Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
-                            }
-                        }
-                    }
-                    break;
-
-            }
-        }
-
-        public static void SortByMax(int[][] jaggedArray, bool option)
-        {
-
-            switch (option)
-            {
-                case true:
-                    for (int i = 0; i < jaggedArray.Length - 1; i++)
-                    {
-                        for (int j = 0; j < jaggedArray.Length - 1 - i; j++)
-                        {
-                            if (FindMaxElem(jaggedArray[j]) < FindMaxElem(jaggedArray[j + 1]))
-                            {
-                                Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
-                            }
-                        }
-                    }
-                    break;
-
-
-                default:
-
-                    for (int i = 0; i < jaggedArray.Length - 1; i++)
-                    {
-                        for (int j = 0; j < jaggedArray.Length - 1 - i; j++)
-                        {
-                            if (FindMaxElem(jaggedArray[j]) > FindMaxElem(jaggedArray[j + 1]))
-                            {
-                                Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
-                            }
-                        }
-                    }
-                    break;
-            }
-        }
-
-        public static void SortByMin(int[][] jaggedArray, bool option)
-        {
-
-            switch (option)
-            {
-                case true:
-                    for (int i = 0; i < jaggedArray.Length - 1; i++)
-                    {
-                        for (int j = 0; j < jaggedArray.Length - 1 - i; j++)
-                        {
-                            if (FindMinElem(jaggedArray[j]) > FindMinElem(jaggedArray[j + 1]))
-                            {
-                                Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
-                            }
-                        }
-                    }
-                    break;
-
-                default:
-
-                    for (int i = 0; i < jaggedArray.Length - 1; i++)
-                    {
-                        for (int j = 0; j < jaggedArray.Length - 1 - i; j++)
-                        {
-                            if (FindMinElem(jaggedArray[j]) < FindMinElem(jaggedArray[j + 1]))
-                            {
-                                Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
-                            }
-                        }
-                    }
-                    break;
-            }
-        }
-
-        public static int Summ(int[] array)
-        {
-            int summ = 0;
-            for (int i = 0; i < array.Length; i++)
-            {
-                summ += array[i];
-            }
-            return summ;
-        }
-
-        public static int FindMaxElem(int[] array)
-        {
-            int max = array[0];
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (array[i] > max)
+                for (int j = 0; j < jaggedArray.Length - 1 - i; j++)
                 {
-                    max = array[i];
+                    if (comparator.Compare(jaggedArray[j], jaggedArray[j + 1]) < 0)
+                    {
+                        Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
+                    }
                 }
             }
 
-            return max;
         }
+
 
         public static int FindMinElem(int[] array)
         {
@@ -159,17 +49,7 @@ namespace SortArraySolutionTask2
             b = temp;
         }
 
-        public static void PrintMatrix(int[][] jaggedArray)
-        {
-            for (int i = 0; i < jaggedArray.Length; i++)
-            {
-
-                for (int j = 0; j < jaggedArray[i].Length; j++)
-                {
-                    Console.Write(jaggedArray[i][j] + "  ");
-                }
-                Console.WriteLine();
-            }
-        }
     }
+
+
 }

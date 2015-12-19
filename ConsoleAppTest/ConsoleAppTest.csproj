@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SortArraySolutionTask2\SortArraySolutionTask2.csproj">
+    <ProjectReference Include="..\SortArraySolutionTask2\SortArrayLogik.csproj">
       <Project>{21b1b07f-e9f2-4881-8acc-ad8abb21367a}</Project>
-      <Name>SortArraySolutionTask2</Name>
+      <Name>SortArrayLogik</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

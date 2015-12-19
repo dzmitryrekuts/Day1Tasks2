@@ -1,0 +1,5 @@
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArraySolutionTask2\bin\Debug\SortArraySolutionTask2.dll
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArraySolutionTask2\bin\Debug\SortArraySolutionTask2.pdb
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArraySolutionTask2\obj\Debug\SortArrayLogik.csprojResolveAssemblyReference.cache
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArraySolutionTask2\obj\Debug\SortArraySolutionTask2.dll
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArraySolutionTask2\obj\Debug\SortArraySolutionTask2.pdb

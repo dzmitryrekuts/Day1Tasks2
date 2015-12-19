@@ -1,4 +1,4 @@
-﻿using SortArraySolutionTask2;
+﻿using SortArrayLogik;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,21 +18,7 @@ namespace ConsoleAppTest
             jaggedArray[3] = new int[] { 11, 2, 20000 };
            
 
-            SortJuggedArray.PrintMatrix(jaggedArray);
-
-            SortJuggedArray.SortBySumm(jaggedArray, true);
-
-            Console.WriteLine("===========================");
-            SortJuggedArray.PrintMatrix(jaggedArray);
-            SortJuggedArray.SortByMax(jaggedArray, true);
-
-            Console.WriteLine("===========================");
-            SortJuggedArray.PrintMatrix(jaggedArray);
-
-            SortJuggedArray.SortByMin(jaggedArray, true);
-
-            Console.WriteLine("===========================");
-            SortJuggedArray.PrintMatrix(jaggedArray);
+           
 
             Console.ReadLine();
 

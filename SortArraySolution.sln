@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortArraySolutionTask2", "SortArraySolutionTask2\SortArraySolutionTask2.csproj", "{21B1B07F-E9F2-4881-8ACC-AD8ABB21367A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortArrayLogik", "SortArraySolutionTask2\SortArrayLogik.csproj", "{21B1B07F-E9F2-4881-8ACC-AD8ABB21367A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppTest", "ConsoleAppTest\ConsoleAppTest.csproj", "{14910A5C-080D-4518-AD29-B8AD2F02F00B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortArrayLogikTests", "SortArrayLogikTests\SortArrayLogikTests.csproj", "{AEE31106-2EC2-43DE-8D02-B81B8C41DDFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{14910A5C-080D-4518-AD29-B8AD2F02F00B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14910A5C-080D-4518-AD29-B8AD2F02F00B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14910A5C-080D-4518-AD29-B8AD2F02F00B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEE31106-2EC2-43DE-8D02-B81B8C41DDFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEE31106-2EC2-43DE-8D02-B81B8C41DDFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEE31106-2EC2-43DE-8D02-B81B8C41DDFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEE31106-2EC2-43DE-8D02-B81B8C41DDFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

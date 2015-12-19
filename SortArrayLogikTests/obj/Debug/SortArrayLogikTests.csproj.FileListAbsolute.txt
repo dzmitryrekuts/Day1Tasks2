@@ -1,0 +1,13 @@
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArrayLogikTests\bin\Debug\SortArrayLogikTests.dll
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArrayLogikTests\bin\Debug\SortArrayLogikTests.pdb
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArrayLogikTests\bin\Debug\nunit.core.dll
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArrayLogikTests\bin\Debug\nunit.core.interfaces.dll
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArrayLogikTests\bin\Debug\nunit.framework.dll
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArrayLogikTests\bin\Debug\nunit.util.dll
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArrayLogikTests\bin\Debug\NUnit.VisualStudio.TestAdapter.dll
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArrayLogikTests\bin\Debug\SortArraySolutionTask2.dll
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArrayLogikTests\bin\Debug\SortArraySolutionTask2.pdb
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArrayLogikTests\bin\Debug\nunit.framework.xml
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArrayLogikTests\obj\Debug\SortArrayLogikTests.csprojResolveAssemblyReference.cache
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArrayLogikTests\obj\Debug\SortArrayLogikTests.dll
+C:\Users\Dzmitry_Rekuts\Documents\Visual Studio 2015\Projects\SortArraySolution\SortArrayLogikTests\obj\Debug\SortArrayLogikTests.pdb
