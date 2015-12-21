@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace SortArrayLogik
 {
-    delegate int SortArrayDel(int[] left, int[] right);
+    public delegate int SortArrayDel(int[] left, int[] right);
 
     public class SortJuggedArray
     {
-
 
         public static void SortArrayI(int[][] jaggedArray, ICustomCompare comparator)
         {
@@ -27,20 +26,22 @@ namespace SortArrayLogik
 
         }
 
-
-        public static int FindMinElem(int[] array)
+        public static void SortArrayD(int[][] jaggedArray, SortArrayDel del)
         {
-            int min = array[0];
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < jaggedArray.Length - 1; i++)
             {
-                if (array[i] < min)
+                for (int j = 0; j < jaggedArray.Length - 1 - i; j++)
                 {
-                    min = array[i];
+                    if (del(jaggedArray[j], jaggedArray[j + 1]) < 0)
+                    {
+                        Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
+                    }
                 }
             }
-            return min;
 
         }
+
+
 
         private static void Swap(ref int[] a, ref int[] b)
         {
