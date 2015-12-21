@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace SortArrayLogik
     public class SortJuggedArray
     {
 
-        public static void SortArrayI(int[][] jaggedArray, ICustomCompare comparator)
+        public static void SortArrayI(int[][] jaggedArray, IComparer<int[]> comparator)
         {
             for (int i = 0; i < jaggedArray.Length - 1; i++)
             {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SortArrayLogikTests
 {
-    public class SortBySumDesc : ICustomCompare
+    public class SortBySumDesc : IComparer<int[]>
     {
         public int Compare(int[] left, int[] right)
         {

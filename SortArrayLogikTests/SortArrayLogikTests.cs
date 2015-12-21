@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace SortArrayLogikTests
 {
-    
-    class Adapter : ICustomCompare
+
+    class Adapter : IComparer<int[]>
     {
         SortArrayDel del;
 
@@ -31,8 +31,8 @@ namespace SortArrayLogikTests
         int[][] jaggedArray;
         int[][] jaggedArrayDesc;
         int[][] jaggedArrayAsc;
-        ICustomCompare sortDesc;
-        ICustomCompare sortAsc;
+        IComparer<int[]> sortDesc;
+        IComparer<int[]> sortAsc;
         SortArrayDel delDesc;
         SortArrayDel delAsc;
 
