@@ -9,22 +9,6 @@ using System.Threading.Tasks;
 namespace SortArrayLogikTests
 {
 
-    class Adapter : IComparer<int[]>
-    {
-        SortArrayDel del;
-
-        public Adapter(SortArrayDel del)
-        {
-            this.del = del;
-        }
-
-
-        public int Compare(int[] left, int[] right)
-        {
-            return del(left, right);
-        }
-    }
-
     [TestFixture]
     public class SortArrayITest
     {
@@ -73,9 +57,9 @@ namespace SortArrayLogikTests
         [Test]
         public void TestArraySortBySum()
         {
-            SortJuggedArray.SortArrayI(jaggedArray, sortDesc);
+            SortArrayWithInterface.SortArrayI(jaggedArray, sortDesc);
             CollectionAssert.AreEqual(jaggedArrayDesc, jaggedArray);
-            SortJuggedArray.SortArrayI(jaggedArray, sortAsc);
+            SortArrayWithInterface.SortArrayI(jaggedArray, sortAsc);
             CollectionAssert.AreEqual(jaggedArrayAsc, jaggedArray);
 
 
@@ -107,9 +91,9 @@ namespace SortArrayLogikTests
         [Test]
         public void TestArraySortByMax()
         {
-            SortJuggedArray.SortArrayI(jaggedArray, sortDesc);
+            SortArrayWithInterface.SortArrayI(jaggedArray, sortDesc);
             CollectionAssert.AreEqual(jaggedArrayDesc, jaggedArray);
-            SortJuggedArray.SortArrayI(jaggedArray, sortAsc);
+            SortArrayWithInterface.SortArrayI(jaggedArray, sortAsc);
             CollectionAssert.AreEqual(jaggedArrayAsc, jaggedArray);
         }
 
@@ -142,9 +126,9 @@ namespace SortArrayLogikTests
         [Test]
         public void TestArraySortBySumDel()
         {
-            SortJuggedArray.SortArrayI(jaggedArray, new Adapter(delDesc));
+            SortArrayWithInterface.SortArrayI(jaggedArray, delDesc);
             CollectionAssert.AreEqual(jaggedArrayDesc, jaggedArray);
-            SortJuggedArray.SortArrayI(jaggedArray, new Adapter(delAsc));
+            SortArrayWithInterface.SortArrayI(jaggedArray, delAsc);
             CollectionAssert.AreEqual(jaggedArrayAsc, jaggedArray);
 
         }
@@ -177,9 +161,9 @@ namespace SortArrayLogikTests
         [Test]
         public void TestArraySortByMaxDel()
         {
-            SortJuggedArray.SortArrayI(jaggedArray, new Adapter(delDesc));
+            SortArrayWithInterface.SortArrayI(jaggedArray, delDesc);
             CollectionAssert.AreEqual(jaggedArrayDesc, jaggedArray);
-            SortJuggedArray.SortArrayI(jaggedArray, new Adapter(delAsc));
+            SortArrayWithInterface.SortArrayI(jaggedArray, delAsc);
             CollectionAssert.AreEqual(jaggedArrayAsc, jaggedArray);
         }
 
@@ -209,9 +193,9 @@ namespace SortArrayLogikTests
         [Test]
         public void TestArraySortBySumDelegateInterfaca()
         {
-            SortJuggedArray.SortArrayD(jaggedArray, sortDesc.Compare);
+            SortArrayWithDelegete.SortArrayD(jaggedArray, sortDesc);
             CollectionAssert.AreEqual(jaggedArrayDesc, jaggedArray);
-            SortJuggedArray.SortArrayD(jaggedArray, sortAsc.Compare);
+            SortArrayWithDelegete.SortArrayD(jaggedArray, sortAsc);
             CollectionAssert.AreEqual(jaggedArrayAsc, jaggedArray);
 
 
@@ -246,9 +230,9 @@ namespace SortArrayLogikTests
         [Test]
         public void TestArraySortBySumDelegate()
         {
-            SortJuggedArray.SortArrayD(jaggedArray, delDesc);
+            SortArrayWithDelegete.SortArrayD(jaggedArray, delDesc);
             CollectionAssert.AreEqual(jaggedArrayDesc, jaggedArray);
-            SortJuggedArray.SortArrayD(jaggedArray, delAsc);
+            SortArrayWithDelegete.SortArrayD(jaggedArray, delAsc);
             CollectionAssert.AreEqual(jaggedArrayAsc, jaggedArray);
 
 
